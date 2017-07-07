@@ -1,3 +1,7 @@
+# APF Version of the JSforce AJAX Proxy
+
+Using the JSforce proxy to connect to APF Salesforce.
+
 # JSforce AJAX Proxy
 
 A proxy server to access Salesforce API from JSforce JavaScript apps served outside of Salesforce.
@@ -23,7 +27,7 @@ Run proxy server :
 $ npm start
 ```
 
-When you use JSforce in your JavaScript app, set `proxyUrl` when creating `Connection` instance. 
+When you use JSforce in your JavaScript app, set `proxyUrl` when creating `Connection` instance.
 
 ```javascript
 var conn = new jsforce.Connection({
@@ -69,4 +73,3 @@ app.all('/proxy/?*', jsforceAjaxProxy({ enableCORS: true }));
 
 You don't have to use this app when you are building a JSforce app in Visualforce,
 because it works in the same domain as Salesforce API.
-
